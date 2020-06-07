@@ -33,7 +33,12 @@ public class MainActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab_agregar);
     }
 
-
+    public void agregar(View v){
+        Intent intent;
+        intent= new Intent(MainActivity.this, AgregarPersona.class);
+        startActivity(intent);
+        finish();
+    }
 
     public List<carro> obtenerCarros(){
         List<carro> carro= new ArrayList<>();
