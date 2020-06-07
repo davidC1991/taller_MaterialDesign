@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1063158597398",
+    "firebase_url": "https://holamundo-274a4.firebaseio.com",
+    "project_id": "holamundo-274a4",
+    "storage_bucket": "holamundo-274a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063158597398:android:6243436d3c9285408fb237",
+        "android_client_info": {
+          "package_name": "com.example.material_design"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063158597398-rehn9n02grsar0rrnmi359nh9shepmab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.material_design",
+            "certificate_hash": "dca145f375cbe0c176ac867c6f990c132b0fe6b5"
+          }
+        },
+        {
+          "client_id": "1063158597398-eroulmmpi1dtb2sd4ca8o2hml8fiag1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5vRx106-baSTPSHoCv300z0AQiLNz_F0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063158597398-eroulmmpi1dtb2sd4ca8o2hml8fiag1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063158597398-mgb7nvskcv0nl14kk4mta5e3ugkv4gbd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.ionic.starter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063158597398:android:42a2fb5a87cce8ae8fb237",
+        "android_client_info": {
+          "package_name": "com.example.personas_material"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063158597398-m4noita9f49ilb0er43rs5ku7ha6dvno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personas_material",
+            "certificate_hash": "dca145f375cbe0c176ac867c6f990c132b0fe6b5"
+          }
+        },
+        {
+          "client_id": "1063158597398-eroulmmpi1dtb2sd4ca8o2hml8fiag1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5vRx106-baSTPSHoCv300z0AQiLNz_F0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063158597398-eroulmmpi1dtb2sd4ca8o2hml8fiag1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063158597398-mgb7nvskcv0nl14kk4mta5e3ugkv4gbd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.ionic.starter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

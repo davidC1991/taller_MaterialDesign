@@ -27,8 +27,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Marca"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/txtColor"
@@ -36,8 +35,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Color"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/txtPlaca"
@@ -45,8 +43,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Placa"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/txtVelocidad"
