@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">material_design</string>
+    <string name="carro_guardado_exitosamente">Carro guardado exitosamente</string>
 </resources>

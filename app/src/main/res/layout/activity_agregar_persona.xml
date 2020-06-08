@@ -8,17 +8,19 @@
     tools:context=".AgregarPersona">
 
     <TextView
-        android:id="@+id/tituloAgregarPersona"
+        android:id="@+id/tituloAgregarCarro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="AGREGAR PERSONA"
+        android:text="AGREGAR CARRO"
         android:textSize="18sp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgSeleccionada"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="seleccionar_foto"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <EditText
@@ -54,7 +56,7 @@
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/txtPrecio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -72,6 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="guardar"
             android:text="Guardar" />
 
         <Button
@@ -80,6 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="limpiar"
             android:text="Limpiar" />
     </LinearLayout>
 </LinearLayout>

@@ -1,19 +1,30 @@
 package com.example.material_design;
 
-public class carro {
-    private String marca,color,placa;
-    private int precio,velocidad,foto;
+public class Carro {
+    private String marca,color,placa,precio,velocidad,id;
+    private int foto;
 
-    public carro() {
-    }
 
-    public carro(String marca, String color, String placa, int precio, int velocidad, int foto) {
+
+
+    public Carro(String marca, String color, String placa, String precio, String velocidad, int foto,String id) {
         this.marca = marca;
         this.color = color;
         this.placa = placa;
         this.precio = precio;
         this.velocidad = velocidad;
         this.foto = foto;
+        this.id=id;
+    }
+
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getMarca() {
@@ -40,19 +51,19 @@ public class carro {
         this.placa = placa;
     }
 
-    public int getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 
-    public int getVelocidad() {
+    public String getVelocidad() {
         return velocidad;
     }
 
-    public void setVelocidad(int velocidad) {
+    public void setVelocidad(String velocidad) {
         this.velocidad = velocidad;
     }
 
@@ -62,5 +73,9 @@ public class carro {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public void guardar(){
+        Datos.guardar(this);
     }
 }

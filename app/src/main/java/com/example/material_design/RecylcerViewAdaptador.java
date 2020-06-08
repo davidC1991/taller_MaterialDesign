@@ -47,9 +47,9 @@ public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdap
 
         holder.marca.setText(carroLista.get(position).getMarca());
         holder.color.setText(carroLista.get(position).getColor());
-        holder.velocidad.setText(Integer.toString(carroLista.get(position).getVelocidad()));
+        holder.velocidad.setText(carroLista.get(position).getVelocidad());
         holder.placa.setText(carroLista.get(position).getPlaca());
-        holder.precio.setText(Integer.toString(carroLista.get(position).getPrecio()));
+        holder.precio.setText(carroLista.get(position).getPrecio());
         holder.foto.setImageResource(carroLista.get(position).getFoto());
     }
 
@@ -59,9 +59,9 @@ public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdap
     }
 
 
-    public List<carro> carroLista;
+    public List<Carro> carroLista;
 
-    public RecylcerViewAdaptador(List<carro> carroLista) {
+    public RecylcerViewAdaptador(List<Carro> carroLista) {
         this.carroLista = carroLista;
     }
 
