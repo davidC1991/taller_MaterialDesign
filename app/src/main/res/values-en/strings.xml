@@ -21,4 +21,11 @@
     <string name="tituloDetalleCarro">CAR DETAIL</string>
     <string name="velocidadMaxDetalleCarro">Max speed</string>
     <string name="velocidad_max">Max speed</string>
+    <string name="ErrorColorCarro">put car\'s color</string>
+    <string name="ErrorPlacaCarro">put car\'s plaque</string>
+    <string name="ErrorPrecioCarro">put car\'s price</string>
+    <string name="ErrorRepetirPlaca">plaque is already wrote</string>
+    <string name="ErrorVelocidadCarro">put car\'s max speed</string>
+    <string name="errorMarcaCarro">put car\'s mark</string>
+    <string name="seleccionarFoto">Select photo</string>
 </resources>

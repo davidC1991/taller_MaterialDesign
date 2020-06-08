@@ -21,4 +21,11 @@
     <string name="tituloDetalleCarro">DETALLE CARRO</string>
     <string name="velocidadMaxDetalleCarro">Velocidad maxima</string>
     <string name="velocidad_max">Velocidad maxima</string>
+    <string name="ErrorColorCarro">Ingrese el color del carro</string>
+    <string name="ErrorPlacaCarro">Ingrese la placa del carro</string>
+    <string name="ErrorPrecioCarro">Ingrese el precio del carro</string>
+    <string name="ErrorRepetirPlaca">La placa ya esta ingresada</string>
+    <string name="ErrorVelocidadCarro">Ingrese la velocidad maxima del carro</string>
+    <string name="errorMarcaCarro">Ingrese la marca del carro</string>
+    <string name="seleccionarFoto">Seleccionar foto</string>
 </resources>
