@@ -1,5 +1,6 @@
 package com.example.material_design;
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -42,8 +48,17 @@ public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+        final Carro p= carroLista.get(position);
+        StorageReference storageReference;
+        storageReference= FirebaseStorage.getInstance().getReference();
 
+        storageReference.child(p.getId()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(holder.foto);
+            }
+        });
 
         holder.marca.setText(carroLista.get(position).getMarca());
         holder.color.setText(carroLista.get(position).getColor());
@@ -51,6 +66,8 @@ public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdap
         holder.placa.setText(carroLista.get(position).getPlaca());
         holder.precio.setText(carroLista.get(position).getPrecio());
         holder.foto.setImageResource(carroLista.get(position).getFoto());
+
+
     }
 
     @Override
