@@ -52,21 +52,24 @@ public class AgregarPersona extends AppCompatActivity {
     public void guardar(View v){
       String marca_1,placa_1,color_1,precio_1,velocidad_1,id;
       int foto;
-        InputMethodManager imp = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        marca_1=marca.getText().toString();
-        placa_1=placa.getText().toString();
-        color_1=color.getText().toString();
-        precio_1=precio.getText().toString();
-        velocidad_1=velocidad.getText().toString();
-        foto=foto_aleatoria();
-        id=Datos.getId();
-        Carro carro = new Carro(marca_1, color_1, placa_1,precio_1, velocidad_1, foto, id);
-        carro.guardar();
-        subir_Foto(id);
-        limpiar();
-        imp.hideSoftInputFromWindow(marca.getWindowToken(),0);
-        Snackbar.make(v,getString(R.string.carro_guardado_exitosamente),Snackbar.LENGTH_LONG).show();
 
+
+          InputMethodManager imp = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+          marca_1 = marca.getText().toString();
+          placa_1 = placa.getText().toString();
+          color_1 = color.getText().toString();
+          precio_1 = precio.getText().toString();
+          velocidad_1 = velocidad.getText().toString();
+        if(validar()) {
+          foto = foto_aleatoria();
+          id = Datos.getId();
+          Carro carro = new Carro(marca_1, color_1, placa_1, precio_1, velocidad_1, foto, id);
+          carro.guardar();
+          subir_Foto(id);
+          limpiar();
+          imp.hideSoftInputFromWindow(marca.getWindowToken(), 0);
+          Snackbar.make(v, getString(R.string.carro_guardado_exitosamente), Snackbar.LENGTH_LONG).show();
+      }
     }
 
 
@@ -108,7 +111,7 @@ public class AgregarPersona extends AppCompatActivity {
         Intent i= new Intent();
         i.setType("image/*");
         i.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(i,"Seleccione foto"),1);
+        startActivityForResult(Intent.createChooser(i,getString(R.string.seleccionarFoto)),1);
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
@@ -120,5 +123,53 @@ public class AgregarPersona extends AppCompatActivity {
                 foto.setImageURI(uri);
             }
         }
+    }
+
+    public boolean validar(){
+        boolean vacio=true;
+
+        String marc= marca.getText().toString();
+        String col= color.getText().toString();
+        String velo= velocidad.getText().toString();
+        String plac= placa.getText().toString();
+        String pre= precio.getText().toString();
+
+        if(marc.isEmpty()){
+            marca.setError(getString(R.string.errorMarcaCarro));
+            vacio=false;
+        }
+        if(col.isEmpty()){
+            vacio=false;
+            color.setError(getString(R.string.ErrorColorCarro));
+        }
+        if(velo.isEmpty()){
+            vacio=false;
+            velocidad.setError(getString(R.string.ErrorVelocidadCarro));
+        }if(plac.isEmpty()){
+            vacio=false;
+            placa.setError(getString(R.string.ErrorPlacaCarro));
+        }if(pre.isEmpty()){
+            vacio=false;
+            precio.setError(getString(R.string.ErrorPrecioCarro));
+        }
+
+        if(marc.equals(plac)&&!marc.isEmpty()){
+            marca.setError(getString(R.string.ErrorRepetirPlaca));
+            vacio=false;
+        }
+        if(col.equals(plac)&&!col.isEmpty()){
+            color.setError(getString(R.string.ErrorRepetirPlaca));
+            vacio=false;
+        }
+        if(pre.equals(plac)&&!pre.isEmpty()){
+            precio.setError(getString(R.string.ErrorRepetirPlaca));
+            vacio=false;
+        }
+        if(velo.equals(plac)&&!velo.isEmpty()){
+            velocidad.setError(getString(R.string.ErrorRepetirPlaca));
+            vacio=false;
+        }
+
+        return vacio;
     }
 }

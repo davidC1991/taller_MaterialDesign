@@ -20,4 +20,11 @@
     <string name="pregunta_eliminarCarro">¿Desea eliminar el carro?</string>
     <string name="opcion_si">si</string>
     <string name="opcion_no">no</string>
+    <string name="errorMarcaCarro">Ingrese la marca del carro</string>
+    <string name="ErrorColorCarro">Ingrese el color del carro</string>
+    <string name="ErrorVelocidadCarro">Ingrese la velocidad maxima del carro</string>
+    <string name="ErrorPlacaCarro">Ingrese la placa del carro</string>
+    <string name="ErrorPrecioCarro">Ingrese el precio del carro</string>
+    <string name="ErrorRepetirPlaca">No puede repetir la placa</string>
+    <string name="seleccionarFoto">Seleccione foto</string>
 </resources>
