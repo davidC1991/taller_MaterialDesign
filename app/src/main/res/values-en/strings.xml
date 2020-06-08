@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cars List</string>
+    <string name="TituloElimnarCarro">titleDeleteCar</string>
+    <string name="carro_guardado_exitosamente">Car successfully saved</string>
+    <string name="color">Color</string>
+    <string name="colorDetalleCarro">Color:</string>
+    <string name="guardarAgregarCarro">Save</string>
+    <string name="guardar_agregarPersona">Save</string>
+    <string name="limpiarAgregarCarro">Clean</string>
+    <string name="marca">Mark</string>
+    <string name="marcaDetalleCarro">Mark</string>
+    <string name="opcion_no">No</string>
+    <string name="opcion_si">Yes</string>
+    <string name="placa">Plaque</string>
+    <string name="placaDetalleCarro">Plaque:</string>
+    <string name="precio">Price</string>
+    <string name="precioDetalleCarro">Price:</string>
+    <string name="pregunta_eliminarCarro">Do you want to delete this car?</string>
+    <string name="tituloAgregarCarro">ADD CAR</string>
+    <string name="tituloDetalleCarro">CAR DETAIL</string>
+    <string name="velocidadMaxDetalleCarro">Max speed</string>
+    <string name="velocidad_max">Max speed</string>
+</resources>

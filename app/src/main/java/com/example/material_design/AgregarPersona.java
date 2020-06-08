@@ -98,7 +98,7 @@ public class AgregarPersona extends AppCompatActivity {
     }
 
     public void onBackPressed(){
-        //finish();
+        //  finish();
         Intent i= new Intent(AgregarPersona.this,MainActivity.class);
         startActivity(i);
     }
