@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
 
     @Override
@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerViewAdaptador;
         final RecylcerViewAdaptador adaptadorCarro;
         DatabaseReference databaseReference;
-        String db= "Personas";
+        String db= "Carros";
         final ArrayList<Carro> carros;
 
         recyclerViewAdaptador= findViewById(R.id.recyclerCarros);
         recyclerViewAdaptador.setLayoutManager(new LinearLayoutManager(this));
         carros= new ArrayList<>();
-        adaptadorCarro=new RecylcerViewAdaptador(obtenerCarros());
+        adaptadorCarro=new RecylcerViewAdaptador(carros);
         recyclerViewAdaptador.setAdapter(adaptadorCarro);
 
         fab = findViewById(R.id.fab_agregar);
@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 carros.clear();
                 if(dataSnapshot.exists()){
                     for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                        Carro p= snapshot.getValue(Carro.class);
-                        carros.add(p);
+                        Carro c= snapshot.getValue(Carro.class);
+                        carros.add(c);
                     }
                 }
                 adaptadorCarro.notifyDataSetChanged();
-                Datos.setPersonas(carros);
+                Datos.setCarros(carros);
             }
 
             @Override
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void agregar(View v){

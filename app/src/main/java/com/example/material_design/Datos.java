@@ -17,13 +17,18 @@ public class Datos {
         return databaseReference.push().getKey();
     }
 
-    public static void setPersonas(ArrayList<Carro> carros){
+    public static void setCarros(ArrayList<Carro> carros){
         carros = carros;
+    }
+
+    public static ArrayList<Carro> carros = new ArrayList();
+
+    public static ArrayList<Carro> obtener(){
+        return carros;
     }
 
     public static void guardar(Carro c){
         databaseReference.child(db).child(c.getId()).setValue(c);
     }
-
 
 }

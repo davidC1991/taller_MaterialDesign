@@ -5,7 +5,7 @@ public class Carro {
     private int foto;
 
 
-
+  public Carro(){}
 
     public Carro(String marca, String color, String placa, String precio, String velocidad, int foto,String id) {
         this.marca = marca;
