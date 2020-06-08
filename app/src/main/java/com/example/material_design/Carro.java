@@ -78,4 +78,8 @@ public class Carro {
     public void guardar(){
         Datos.guardar(this);
     }
+
+    public void elminar(){
+        Datos.eliminar(this);
+    }
 }

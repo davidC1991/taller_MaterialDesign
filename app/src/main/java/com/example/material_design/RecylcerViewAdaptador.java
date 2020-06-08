@@ -21,25 +21,16 @@ import java.util.List;
 
 public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdaptador.ViewHolder> {
 
+    public List<Carro> carroLista;
+    private final OnCarroClickListener clickListener;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView marca,color,placa,precio,velocidad;
-        ImageView foto;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            marca=itemView.findViewById(R.id.marcaCarro);
-            color=itemView.findViewById(R.id.colorCarro);
-            precio=itemView.findViewById(R.id.precioCarro);
-            velocidad=itemView.findViewById(R.id.maxVelocidadCarro);
-            placa=itemView.findViewById(R.id.placaCarro);
-            foto=itemView.findViewById(R.id.imgCarro);
-        }
+    public RecylcerViewAdaptador(List<Carro> carroLista,OnCarroClickListener clickListener) {
+        this.carroLista = carroLista;
+        this.clickListener=clickListener;
     }
 
 
-    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_carros,parent,false);
@@ -67,7 +58,12 @@ public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdap
         holder.precio.setText(carroLista.get(position).getPrecio());
         holder.foto.setImageResource(carroLista.get(position).getFoto());
 
-
+        holder.v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickListener.onCarroClick(p);
+            }
+        });
     }
 
     @Override
@@ -76,10 +72,26 @@ public class RecylcerViewAdaptador extends RecyclerView.Adapter<RecylcerViewAdap
     }
 
 
-    public List<Carro> carroLista;
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-    public RecylcerViewAdaptador(List<Carro> carroLista) {
-        this.carroLista = carroLista;
+        public View v;
+        private TextView marca,color,placa,precio,velocidad;
+        ImageView foto;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            v =itemView;
+            marca=itemView.findViewById(R.id.marcaCarro);
+            color=itemView.findViewById(R.id.colorCarro);
+            precio=itemView.findViewById(R.id.precioCarro);
+            velocidad=itemView.findViewById(R.id.maxVelocidadCarro);
+            placa=itemView.findViewById(R.id.placaCarro);
+            foto=itemView.findViewById(R.id.imgCarro);
+        }
+    }
+
+    public interface OnCarroClickListener{
+        void onCarroClick(Carro p);
     }
 
 }

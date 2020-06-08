@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements RecylcerViewAdaptador.OnCarroClickListener{
 
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
         recyclerViewAdaptador= findViewById(R.id.recyclerCarros);
         recyclerViewAdaptador.setLayoutManager(new LinearLayoutManager(this));
         carros= new ArrayList<>();
-        adaptadorCarro=new RecylcerViewAdaptador(carros);
+        adaptadorCarro=new RecylcerViewAdaptador(carros, (RecylcerViewAdaptador.OnCarroClickListener) this);
         recyclerViewAdaptador.setAdapter(adaptadorCarro);
 
         fab = findViewById(R.id.fab_agregar);
@@ -71,13 +71,25 @@ public class MainActivity extends AppCompatActivity{
         finish();
     }
 
-    public List<Carro> obtenerCarros(){
-        List<Carro> carro= new ArrayList<>();
-        carro.add(new Carro("Ferrari","Rojo","4fr456","432.000 dolares","250 km/h",R.drawable.ferrari,"FDFD"));
-        carro.add(new Carro("Bugatti","Negro","dfg456","546.000 dolares","270 km/h",R.drawable.bugatti,"fs"));
-        carro.add(new Carro("Porche","azul","4se456","300.000 dolares","220 km/h",R.drawable.porche,"ds"));
-        carro.add(new Carro("Lanbroghini","Rojo","4dr566","340.000 dolares","370 km/h",R.drawable.lanborghini,"ds"));
 
-        return carro;
+
+
+    public void onCarroClick(Carro p){
+        Intent intent;
+        Bundle bundle;
+
+        bundle = new Bundle();
+        bundle.putString("marca",p.getMarca());
+        bundle.putString("color",p.getColor());
+        bundle.putString("placa",p.getPlaca());
+        bundle.putString("velocidad",p.getVelocidad());
+        bundle.putString("precio",p.getPrecio());
+        bundle.putString("id",p.getId());
+
+        intent = new Intent(MainActivity.this, DetalleCarro.class);
+        intent.putExtra("datos",bundle);
+        startActivity(intent);
+        //finish();
     }
+
 }

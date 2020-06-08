@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="AGREGAR CARRO"
+        android:text="@string/tituloAgregarCarro"
         android:textSize="18sp" />
 
     <ImageView
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Marca"
+        android:hint="@string/marca"
         android:inputType="textPersonName" />
 
     <EditText
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Color"
+        android:hint="@string/color"
         android:inputType="textPersonName" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Placa"
+        android:hint="@string/placa"
         android:inputType="textPersonName" />
 
     <EditText
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Velocidad maxima"
+        android:hint="@string/velocidad_max"
         android:inputType="number" />
 
     <EditText
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Precio"
+        android:hint="@string/precio"
         android:inputType="number" />
 
     <LinearLayout
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="guardar"
-            android:text="Guardar" />
+            android:text="@string/guardarAgregarCarro" />
 
         <Button
             android:id="@+id/btnLimpiar"
@@ -84,6 +84,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="limpiar"
-            android:text="Limpiar" />
+            android:text="@string/limpiarAgregarCarro" />
     </LinearLayout>
 </LinearLayout>

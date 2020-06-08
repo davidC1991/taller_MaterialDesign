@@ -31,4 +31,8 @@ public class Datos {
         databaseReference.child(db).child(c.getId()).setValue(c);
     }
 
+    public static void eliminar(Carro p){
+        databaseReference.child(db).child(p.getId()).removeValue();
+        storageReference.child(p.getId()).delete();
+    }
 }

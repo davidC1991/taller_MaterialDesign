@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">material_design</string>
     <string name="carro_guardado_exitosamente">Carro guardado exitosamente</string>
+    <string name="marca">Marca</string>
+    <string name="color">Color</string>
+    <string name="placa">Placa</string>
+    <string name="velocidad_max">Velocidad max</string>
+    <string name="precio">Precio</string>
+    <string name="guardar_agregarPersona">Guardar</string>
+    <string name="guardarAgregarCarro">Guardar</string>
+    <string name="limpiarAgregarCarro">Limpiar</string>
+    <string name="tituloAgregarCarro">AGREGAR CARRO</string>
+    <string name="tituloDetalleCarro">DETALLE CARRO</string>
+    <string name="marcaDetalleCarro">Marca:</string>
+    <string name="colorDetalleCarro">Color:</string>
+    <string name="placaDetalleCarro">Placa:</string>
+    <string name="velocidadMaxDetalleCarro">VelocidadMax:</string>
+    <string name="precioDetalleCarro">Precio:</string>
+    <string name="TituloElimnarCarro">Eliminar carro</string>
+    <string name="pregunta_eliminarCarro">¿Desea eliminar el carro?</string>
+    <string name="opcion_si">si</string>
+    <string name="opcion_no">no</string>
 </resources>
